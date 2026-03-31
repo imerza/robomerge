@@ -1,17 +1,27 @@
 # Imerza Additions
 
-1. Build the required docker images:
+* Create an .env file next to the docker-compose.yml, use the .example.env for reference
+
+* Set the correct values in the .env file
+
+* Place your TLS pem file named robomerge.pem here. Note that if no 'vault' folder is found, RoboMerge will fall back to running on port 8080 over HTTP (see Watchdog.startServer in watchdog.ts) and no log-in will be required.
+
+* Build the required docker images:
 
 ```bash
 docker buildx bake
 ```
 
-2. Start the service use the following script:
+* Start the service use the following script:
 
 ```bash
 docker compose up
 ```
 
+* To tail the robomerge logs use:
+```bash
+docker compose logs -f --tail=32 robomerge
+```
 
 # Original 
 

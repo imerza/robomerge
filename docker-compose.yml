@@ -1,14 +1,22 @@
 services:
-
   robomerge:
     image: robomerge:latest
     restart: unless-stopped
+    networks:
+      - localnet
+    env_file:
+      - .env
     ports:
       - "8877:8877"
-      - "1666:1666"
+      - "${P4PORT}:${P4PORT}"
     environment:
-      NODE_ENV: production
-      P4PORT: perforce:1666
-      P4PASSWD: xxxx
-      BOTS: robomergeQA1
-      ROBO_EXTERNAL_URL: http://localhost:8877
+      NODE_ENV: ${NODE_ENV}
+      P4PORT: "perforce:${P4PORT}"
+      P4PASSWD: ${P4PASSWD}
+      BOTS: ${BOTS}
+      ROBO_LOG_LEVEL: ${ROBO_LOG_LEVEL}
+      ROBO_EXTERNAL_URL: "http://localhost:8877"
+
+networks:
+  localnet:
+    driver: bridge
