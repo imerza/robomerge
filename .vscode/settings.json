@@ -1,0 +1,7 @@
+{
+  "js/ts.tsdk.path": "node_modules/typescript/lib",
+  "search.exclude": {
+    "dist": true,
+    "functional_tests/framework/dist": true
+  }
+}

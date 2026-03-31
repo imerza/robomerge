@@ -1,0 +1,15 @@
+services:
+
+  helix:
+    image: helix:latest
+    build:
+      context: ./
+      dockerfile: helix.Dockerfile
+ 
+  helix-and-node:
+    image: helix-and-node:latest
+    depends_on: 
+      - helix
+    build:
+      context: ./
+      dockerfile: helix-and-node.Dockerfile
