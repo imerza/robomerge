@@ -1,0 +1,14 @@
+services:
+
+  robomerge:
+    image: robomerge:latest
+    restart: unless-stopped
+    ports:
+      - "8877:8877"
+      - "1666:1666"
+    environment:
+      NODE_ENV: production
+      P4PORT: perforce:1666
+      P4PASSWD: xxxx
+      BOTS: robomergeQA1
+      ROBO_EXTERNAL_URL: http://localhost:8877

@@ -20,7 +20,7 @@ RUN npm install
 COPY functional_tests/framework .
 
 # Environment variables
-ENV P4PORT p4docker:1666
+ENV P4PORT=p4docker:1666
 
 RUN tsc -p .
 

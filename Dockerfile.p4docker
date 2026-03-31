@@ -6,16 +6,16 @@ FROM helix
 
 # Create directory for p4 database
 RUN mkdir /p4root
-ENV P4ROOT /p4root
+ENV P4ROOT=/p4root
 
 # Create directory for journals
 RUN mkdir -p /p4root/journal
 RUN touch /p4root/journal/journal
-ENV P4JOURNAL journal/journal
+ENV P4JOURNAL=journal/journal
 
 # Create logs
 RUN mkdir -p /p4root/logs
-ENV P4LOGS /p4root/logs/log
+ENV P4LOGS=/p4root/logs/log
 RUN touch $P4LOGS
 
 # Create container folders for local files
@@ -28,12 +28,12 @@ RUN mkdir /p4docker
 ############################
 
 # Set up Perforce ports
-ENV P4PORT 1666
+ENV P4PORT=1666
 EXPOSE ${P4PORT}
 
 # Set up Perforce environment variables
-ENV P4USER root
-ENV P4PASSWD password123
+ENV P4USER=root
+ENV P4PASSWD=password123
 
 
 ####################

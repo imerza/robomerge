@@ -1,3 +1,20 @@
+# Imerza Additions
+
+1. Build the required docker images:
+
+```bash
+docker buildx bake
+```
+
+2. Start the service use the following script:
+
+```bash
+docker compose up
+```
+
+
+# Original 
+
 ## Robomerge help and quick reference
 <!-- The 'toc' comment is required by the marked-toc plugin and for roboserver.ts to insert a table of contents. -->
 <!-- toc -->
