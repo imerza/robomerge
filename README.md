@@ -12,7 +12,7 @@
 docker buildx bake
 ```
 
-* Start the service use the following script:
+* Start the service:
 
 ```bash
 docker compose up
