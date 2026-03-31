@@ -21,6 +21,9 @@ target "p4docker" {
   context = "./"
   dockerfile = "Dockerfile.p4docker"
   tags = ["p4docker:latest"]
+  contexts = {
+    helix = "target:helix"
+  }
 }
 
 target "robomerge" {
