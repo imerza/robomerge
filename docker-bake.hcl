@@ -13,7 +13,7 @@ target "helix-and-node" {
   dockerfile = "helix-and-node.Dockerfile"
   tags = ["helix-and-node:latest"]
   contexts = {
-    "helix" = "target:helix"
+    helix = "target:helix"
   }
 }
 
@@ -28,6 +28,6 @@ target "robomerge" {
   dockerfile = "Dockerfile"
   tags = ["robomerge:latest"]
   contexts = {
-    "helix" = "target:helix-and-node"
+    helix = "target:helix-and-node"
   }
 }
