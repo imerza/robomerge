@@ -15,12 +15,12 @@ docker buildx bake
 * Start the service:
 
 ```bash
-docker compose up
+docker compose up --detach
 ```
 
 * To tail the robomerge logs use:
 ```bash
-docker compose logs -f --tail=32 robomerge
+docker compose logs -f --tail=64 robomerge
 ```
 
 # Original 
