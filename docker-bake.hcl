@@ -31,6 +31,6 @@ target "robomerge" {
   dockerfile = "Dockerfile"
   tags = ["robomerge:latest"]
   contexts = {
-    helix = "target:helix-and-node"
+    helix-and-node = "target:helix-and-node"
   }
 }
