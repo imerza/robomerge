@@ -17,8 +17,8 @@ services:
       BOTS: ${BOTS}
       ROBO_LOG_LEVEL: ${ROBO_LOG_LEVEL}
       ROBO_EXTERNAL_URL: "http://localhost:8877"
-    volumes:
-      - ~/.p4trust:/root/.p4trust:ro
+    # volumes:
+    #   - ~/.p4trust:/root/.p4trust:ro
     entrypoint: sh -c "p4 -p $P4PORT trust -y && node --require source-map-support/register dist/robo/watchdog.js"
 
 networks:
